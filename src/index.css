@@ -1,0 +1,71 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: steelblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.todo_list {
+  background: cadetblue;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+   box-shadow:
+        0px 5px 10px 20px rgba(0,0,0,0.15);          
+}
+.greeting {
+  background: plum;
+  border-bottom: purple 2px solid;
+  padding: 2rem 0;
+  font-size: 3rem;
+}
+.todo_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-decoration: underline purple;
+  
+}
+
+input[type=checkbox] {
+  display: none;
+ 
+}
+input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-right: 1rem;
+
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: purple;
+}
+ input[type="checkbox"]:checked + *::before {
+  content: '🦄';
+  color: white;
+ 
+ 
+  text-align: center;
+  background: teal;
+  border-color: teal;
+}
+input[type="checkbox"]:checked + * {
+  color: purple;
+}
